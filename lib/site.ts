@@ -28,7 +28,7 @@ export const CHECKOUT_URLS: Record<PlanId, string> = {
 export const DEFAULT_CHECKOUT = CHECKOUT_URLS.pro;
 
 export const SUPPORT_EMAIL =
-  process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@reglow.app";
+  process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "sorskyt5@gmail.com";
 
 export const REAL_ACCOUNT_CTA = "פתיחת חשבון אמיתי";
 
