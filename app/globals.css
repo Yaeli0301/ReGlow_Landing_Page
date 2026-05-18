@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+@source "../context/**/*.{js,ts,jsx,tsx,mdx}";
+
+@theme {
+  --color-brand-50: #fdf4f8;
+  --color-brand-100: #fce7f0;
+  --color-brand-200: #fbcfe8;
+  --color-brand-300: #f9a8d4;
+  --color-brand-400: #f472b6;
+  --color-brand-500: #ec4899;
+  --color-brand-600: #db2777;
+  --color-brand-700: #be185d;
+  --color-purple-400: #c084fc;
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+  --font-sans: var(--font-heebo), "Segoe UI", Tahoma, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    color: #1f2937;
+    background: linear-gradient(180deg, #fdf4f8 0%, #ffffff 45%, #faf5ff 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+}
