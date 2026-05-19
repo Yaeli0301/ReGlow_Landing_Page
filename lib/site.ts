@@ -1,14 +1,28 @@
-export const PRIMARY_CTA = "התחילי עכשיו";
-export const SECONDARY_CTA = "לראות איך זה עובד";
+export const PRIMARY_CTA = "להתחיל דמו חינם";
+export const SECONDARY_CTA = "איך זה עובד";
+
+export const DEMO_URL = "/demo/start?plan=pro";
 
 export type PlanId = "basic" | "pro" | "premium";
 
-/** Full ReGlow app (demo deployment) — set to your Render URL in production */
+/** Relative path on the landing site — redirects to the full ReGlow app demo */
+export function getDemoStartPath(plan: PlanId = "pro"): string {
+  return `/demo/start?plan=${plan}`;
+}
+
+/** Production demo app — override with NEXT_PUBLIC_REGLOW_APP_URL in Vercel. */
+const PRODUCTION_REGLOW_APP_URL = "https://re-glow.vercel.app";
+
+/** Full ReGlow app on Vercel — set NEXT_PUBLIC_REGLOW_APP_URL in .env.local */
 export function getReglowAppUrl(): string {
-  const url =
-    process.env.NEXT_PUBLIC_REGLOW_APP_URL?.trim() ||
-    "http://localhost:3000";
-  return url.replace(/\/$/, "");
+  const configured = process.env.NEXT_PUBLIC_REGLOW_APP_URL?.trim();
+  if (configured) return configured.replace(/\/$/, "");
+
+  if (process.env.NODE_ENV === "production") {
+    return PRODUCTION_REGLOW_APP_URL;
+  }
+
+  return "http://localhost:3001";
 }
 
 /** Opens the real ReGlow demo (dashboard, clients, appointments, etc.) */
@@ -31,6 +45,9 @@ export const SUPPORT_EMAIL =
   process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "sorskyt5@gmail.com";
 
 export const REAL_ACCOUNT_CTA = "פתיחת חשבון אמיתי";
+
+export const FOOTER_SIGNUP_HEADLINE = "יאללה, השתכנעתי — בא לי להרוויח יותר 💰";
+export const FOOTER_SIGNUP_CTA = "קדימה לפתיחת חשבון →";
 
 export function getSignupUrl(plan: PlanId = "pro"): string {
   const checkout = CHECKOUT_URLS[plan];

@@ -1,11 +1,11 @@
 import { Section } from "./ui/Section";
 
 const features = [
+  { icon: "👥", text: "ניהול לקוחות חכם" },
   { icon: "🔔", text: "זיהוי לקוחות שלא חזרו" },
-  { icon: "📅", text: "לוח תורים חכם" },
-  { icon: "💬", text: "שליחת הודעות אוטומטיות" },
-  { icon: "🔗", text: "דף הזמנה אישי" },
-  { icon: "👥", text: "ניהול לקוחות פשוט" },
+  { icon: "💬", text: "הודעות אוטומטיות" },
+  { icon: "📅", text: "יומן תורים חכם" },
+  { icon: "🔗", text: "דף הזמנות אישי" },
 ];
 
 export function Features() {
@@ -24,10 +24,6 @@ export function Features() {
           </li>
         ))}
       </ul>
-
-      <p className="mx-auto mt-10 max-w-lg text-center text-base font-semibold text-brand-700">
-        נבנה במיוחד לקוסמטיקאיות — לא מערכת גנרית
-      </p>
     </Section>
   );
 }

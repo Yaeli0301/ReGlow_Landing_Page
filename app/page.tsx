@@ -15,21 +15,13 @@ export default function Home() {
     <>
       <BrandBar />
       <main>
-        {/* 1. Hook */}
         <Hero />
-        {/* 2. Pain */}
         <Problem />
-        {/* 3. Mechanism */}
         <Solution />
-        {/* 4. How */}
         <HowItWorks />
-        {/* 5. Value */}
         <Features />
-        {/* 6. Proof */}
         <SocialProof />
-        {/* 7. Decision */}
         <Pricing />
-        {/* 8. Close */}
         <FinalCTA />
       </main>
       <Footer />

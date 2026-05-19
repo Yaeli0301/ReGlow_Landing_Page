@@ -32,7 +32,7 @@ export function Button({
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center gap-2 transition-all duration-200 ${variants[variant]} ${variant !== "ghost" ? sizes[size] : "text-base font-semibold"} ${className}`;
 
-  if (external || href.startsWith("http") || href.includes("/demo/start")) {
+  if (external || href.startsWith("http")) {
     return (
       <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
         {children}
